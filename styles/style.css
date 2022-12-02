@@ -33,31 +33,23 @@ body {
 
 /* 메인영역 */
 .main {
+  display: flex;
+  flex-direction: row;
   background-color: lightpink;
-  display: flow-root;
-  padding: 0 15px;
   min-height: 50vh;
 }
 
-.group {
-  margin: 0 15px;
-  margin-top: 30px;
-}
-
 .group1 {
-  float: left;
   width: 250px;
   background-color: antiquewhite;
 }
 
 .group2 {
-  float: left;
   width: 380px;
   background-color: sandybrown;
 }
 
 .group3 {
-  float: left;
   width: 190px;
   background-color: cornflowerblue;
 }
