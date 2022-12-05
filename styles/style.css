@@ -1,5 +1,6 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
 
 /* 기본 스타일 */
 *, *::before, *::after {
@@ -33,13 +34,19 @@ body {
   background-color: blueviolet;
 }
 
-.member li::before {
-  content: ':';
+/* .member li::before {
+  content: '\e800';
+  font-family: 'fontello';
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
 }
 
 .member li:first-child::before {
   content: '';
-}
+} */
 
 /* 비주얼 */
 .visual {
