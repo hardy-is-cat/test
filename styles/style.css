@@ -58,7 +58,7 @@ body {
 .logo {
   position: absolute;
   top: 45px;
-  left: 60px;
+  left: 62px;
 }
 
 /* 텍스트 링크 모음 */
@@ -99,7 +99,8 @@ body {
 
 .menu {
   display: flow-root;
-  padding-left: 230px;
+  height: 47px;
+  padding-left: 234px;
   background: #e85e2c linear-gradient(
     to bottom,
     #ef9126 0%,
@@ -112,7 +113,18 @@ body {
 
 .menu-item {
   float: left;
-  background-color: aqua;
+  border-left: 2px solid #fff;
+}
+
+.menu-button {
+  border: 0;
+  padding: 0 23px;
+  line-height: 47px;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .8), -1px -1px 0 rgba(0, 0, 0, .8);
 }
 
 .sub-menu {
