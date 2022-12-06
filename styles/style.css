@@ -30,7 +30,13 @@ a {
 body {
   font-size: 1.4rem;
   color: #212121;
-  background: linear-gradient(#ccc, #fff) no-repeat;
+  background: linear-gradient(
+    to bottom,
+    #ccc,
+    #eee 35%,
+    #efefef 60%,
+    #fff 100%
+  );
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
@@ -86,15 +92,33 @@ body {
 }
 
 /* 메인메뉴 */
+.navigation {
+  padding-bottom: 100px;
+  border-top: 2px solid #212121;
+}
+
 .menu {
-  background: #e85e2c
-    linear-gradient(
-      to bottom,
-      #ef9126 0%,
-      #e85e2c 35%,
-      #e85e2c 70%,
-      #ef9126 100%
-    );
+  display: flow-root;
+  padding-left: 230px;
+  background: #e85e2c linear-gradient(
+    to bottom,
+    #ef9126 0%,
+    #e85e2c 35%,
+    #e85e2c 70%,
+    #ef9126 100%
+  );
+  border-radius: 0 0 5px 5px;
+}
+
+.menu-item {
+  float: left;
+  background-color: aqua;
+}
+
+.sub-menu {
+  background-color: skyblue;
+  position: absolute;
+  display: none;
 }
 
 /* 비주얼 */
@@ -141,7 +165,13 @@ body {
 
 /* 푸터 */
 .footer {
-  background-color: salmon;
+  background: linear-gradient(
+    to bottom,
+    #ccc,
+    #eee 35%,
+    #efefef 60%,
+    #fff 100%
+  );
 }
 .footer .footer-inner {
   height: 15vh;
