@@ -1,5 +1,6 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
 
 /* 숨김 콘텐츠 */
 .a11y-hidden {
@@ -59,6 +60,7 @@ body {
   position: absolute;
   top: 45px;
   left: 62px;
+  z-index: 10;
 }
 
 /* 텍스트 링크 모음 */
@@ -82,25 +84,22 @@ body {
   text-transform: uppercase;
 }
 
-/* 마지막 li에 포함된 a를 선택해 padding-right : 0 */
-/* .member li:last-child a {
-  padding-right: 0;
-} */
-
 .divider {
   margin-right: 4px;
 }
 
 /* 메인메뉴 */
 .navigation {
-  padding-bottom: 100px;
-  border-top: 2px solid #212121;
+  padding-bottom: 38px;
 }
 
 .menu {
+  /* 세번째 메뉴까지를 제외한 나머지 메뉴는 submenu를 menu 기준으로 배치되게 함 */
+  position: relative;
   display: flow-root;
   height: 47px;
   padding-left: 234px;
+  border-top: 2px solid #212121;
   background: #e85e2c linear-gradient(
     to bottom,
     #ef9126 0%,
@@ -111,15 +110,21 @@ body {
   border-radius: 0 0 5px 5px;
 }
 
+/* 세번째 메뉴까지만 submenu를 li를 기준으로 배치되게 함 */
+.menu > li:nth-child(-n + 3) {
+  position: relative;
+}
+
 .menu-item {
+  position: relative;
   float: left;
   border-left: 2px solid #fff;
 }
 
-.menu-button {
+.menu-item .menu-button {
   border: 0;
   padding: 0 23px;
-  line-height: 47px;
+  line-height: 45px;
   background: transparent;
   color: #fff;
   font-size: 15px;
@@ -127,28 +132,71 @@ body {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .8), -1px -1px 0 rgba(0, 0, 0, .8);
 }
 
-.is-active .menu-button {
+.menu-item.is-active .menu-button {
   color: #ff0;
 }
 
-.is-active .menu-button::after {
+.menu-item.is-active .menu-button::after {
   content: '';
   display: block;
   border-bottom: 2px solid #212121;
 }
 
-.is-active .sub-menu {
-  display: block;
+.menu-item .sub-menu {
+  position: absolute;
+  top: 47px;
+  display: none;
+  padding: 4px 0;
 }
 
-.sub-menu {
-  background-color: skyblue;
-  position: absolute;
-  display: none;
+.menu-html, .menu-css, .menu-standards {
+  left: 0;
+}
+
+.menu-accessibility, .menu-qna, .menu-archive {
+  right: 0;
+}
+
+.menu-item.is-active .sub-menu {
+  display: block;
+  white-space: nowrap;
 }
 
 .sub-menu li {
-  float: left;
+  display: inline-block;
+}
+
+.sub-menu li a {
+  display: inline-block;
+  padding: 6px 0;
+}
+
+.sub-menu li a::before {
+  content: '\e805';
+  font-family: 'fontello';
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sub-menu li a:hover,
+.sub-menu li a:focus {
+  color: red;
+}
+
+.sub-menu li a:hover::before,
+.sub-menu li a:focus::before {
+  content: '\e801';
+  color: red;
 }
 
 /* 비주얼 */
