@@ -127,10 +127,28 @@ body {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .8), -1px -1px 0 rgba(0, 0, 0, .8);
 }
 
+.is-active .menu-button {
+  color: #ff0;
+}
+
+.is-active .menu-button::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #212121;
+}
+
+.is-active .sub-menu {
+  display: block;
+}
+
 .sub-menu {
   background-color: skyblue;
   position: absolute;
   display: none;
+}
+
+.sub-menu li {
+  float: left;
 }
 
 /* 비주얼 */
