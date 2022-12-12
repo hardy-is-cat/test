@@ -286,6 +286,7 @@ body {
   margin: 0 15px;
 }
 
+/* 메인컨텐츠 group1 영역 */
 .group1 {
   width: 250px;
 }
@@ -467,10 +468,65 @@ body {
   float: right;
 }
 
+/* 메인컨텐츠 group2 영역 */
 .group2 {
   width: 380px;
   background-color: sandybrown;
 }
+
+/* 자료검색 영역 */
+.search-form {
+  background-color: green;
+  padding: 15px 25px 10px;
+  border: 1px solid #aaa;
+  border-radius: 10px 10px 0 0;
+  background: #ddd linear-gradient(to bottom, #ccc, #eee);
+}
+
+.search-form-inner {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.form-group {
+  /* background-color: yellow; */
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.form-group .search-form-label {
+  /* background-color: red; */
+  flex-shrink: 0;
+  /* white-space: nowrap; */
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.form-group .search-form-input {
+  flex-grow: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 4px 4px 2px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
+
+.search-button {
+  flex-shrink: 0;
+  /* white-space: nowrap; */
+  padding: 4px 8px;
+  height: 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: #212121;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
 
 .group3 {
   width: 190px;
