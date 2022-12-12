@@ -471,7 +471,7 @@ body {
 /* 메인컨텐츠 group2 영역 */
 .group2 {
   width: 380px;
-  background-color: sandybrown;
+  /* background-color: sandybrown; */
 }
 
 /* 자료검색 영역 */
@@ -525,6 +525,81 @@ body {
   background-color: #212121;
   color: #fff;
   font-size: 1.2rem;
+}
+
+/* 게시판 영역 */
+.board {
+  position: relative;
+  margin-top: 20px;
+}
+
+.board .tab-list {
+  font-size: 0;
+}
+
+.board .tab-list li {
+  display: inline-block;
+}
+
+.board .tab {
+  padding: 6px 14px;
+  border: 1px solid #aaa;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  background-color: #ccc;
+  color: #666;
+  font-size: 1.4rem;
+}
+
+.board .tab.is-select {
+  background-color: white;
+  color: #e85e2c;
+  border-color: currentColor currentColor #fff currentColor;
+}
+
+/* 게시판 본문 영역 */
+.tab-panel {
+  display: none;
+  margin-top: 15px;
+}
+
+.tab-panel.is-select {
+  display: block;
+}
+
+.board-list {
+  margin-top: 10px;
+}
+
+.board-list li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.board-list a {
+  padding: 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+.board-list time {
+  flex-shrink: 0;
+} 
+
+.board-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.board-more.icon-plus::before {
+  color: hsla(110, 50%, 40%, 1);
 }
 
 
