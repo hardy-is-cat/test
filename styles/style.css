@@ -411,6 +411,62 @@ body {
   color: red;
 }
 
+/* 웹 관련 용어 */
+.term {
+  padding: 10px 15px;
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: #ddd linear-gradient(to bottom, #ccc, #eee);
+}
+
+.term .term-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.term-list {
+  margin-top: 10px;
+}
+
+.term-list div {
+  display: flow-root;
+  margin-top: 10px;
+}
+
+.term-list-subject,
+.term-list-brief {
+  float: right;
+  width: 145px;
+}
+
+.term-list-subject {
+  color: #296897;
+  font-weight: 500;
+}
+.term-list-thumnail {
+  float: left;
+}
+
+.term-list-thumnail img {
+  vertical-align: middle;
+}
+
+.term-list-brief {
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+/* 짝수번째 컨텐츠 레이아웃 변경 */
+.cross .term-list-subject,
+.cross .term-list-brief {
+  float: left;
+}
+
+.cross .term-list-thumnail {
+  float: right;
+}
+
 .group2 {
   width: 380px;
   background-color: sandybrown;
