@@ -576,7 +576,7 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0;
+  margin: 6px 0;
 }
 
 .board-list a {
