@@ -1,6 +1,7 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 @import url(./fontello.css);
+@import url(./module.css);
 
 /* 숨김 콘텐츠 */
 .a11y-hidden, legend {
@@ -610,7 +611,6 @@ body {
 }
 
 .news h2 {
-  color: #e85e2c;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -672,6 +672,89 @@ body {
 .group3 {
   width: 190px;
   background-color: cornflowerblue;
+}
+
+/* 신규 이벤트 및 관련 사이트 */
+.event {
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
+}
+
+.event-button-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 18px;
+}
+
+/* IR(Image Replacement) 기법 */
+.event-button {
+  width: 19px;
+  height: 100%;
+  border: none;
+  padding: 20px 0 0 0;
+  overflow: hidden;
+  background: url(./images/back_forward.png) no-repeat;
+}
+
+.event-button-prev {
+  background-position: 0 0;
+}
+
+.event-button-next {
+  background-position: -36px 0;
+}
+
+.event-button:focus {
+  outline-offset: -2px;
+}
+
+.event-thumbnail {
+  margin-top: 16px;
+}
+
+.event-thumbnail img {
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, .2);
+}
+
+.event-brief {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.related {
+  margin-top: 10px;
+}
+
+.related-list {
+  padding: 6px 16px;
+  margin-top: 10px;
+  height: 28px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: height 0.4s 0s ease-in-out
+}
+
+.related-list:hover,
+.related-list:focus {
+  height: 148px;
+  /* transform: translateY(10px) */
+}
+
+.related-list li {
+  transition: transform 0.3s 0.4s ease-in-out;;
+}
+
+.related-list:hover li,
+.related-list:focus li {
+  transform: translateY(8px)
+}
+
+.related-list li {
+  margin-bottom: 10px;
 }
 
 /* 슬로건 */
