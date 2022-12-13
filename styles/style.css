@@ -655,7 +655,7 @@ body {
 }
 
 .news-item-thumbnail img {
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, .2);
 }
 .news-item-thumbnail figcaption {
   margin-top: 10px;
