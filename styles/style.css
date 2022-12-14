@@ -866,7 +866,43 @@ body {
     #fff 100%
   );
 }
+
 .footer .footer-inner {
-  height: 15vh;
-  background-color: tomato;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.footer-logo {
+  display: inline-block;
+  padding: 10px;
+}
+
+.footer .guide-list {
+  display: flex;
+  flex-grow: 1;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-radius: 100px;
+  background-color: #777;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.footer .guide-list a {
+  display: block;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.footer address {
+  margin-top: 10px;
+}
+
+.footer small {
+  display: inline-block;
+  margin-top: 4px;
 }
