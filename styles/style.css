@@ -671,7 +671,6 @@ body {
 
 .group3 {
   width: 190px;
-  background-color: cornflowerblue;
 }
 
 /* 신규 이벤트 및 관련 사이트 */
@@ -755,6 +754,64 @@ body {
 
 .related-list li {
   margin-bottom: 10px;
+}
+
+/* 인기 사이트 */
+.favorite {
+  position: relative;
+}
+.favorite-list {
+  list-style-type: none;
+  counter-reset: number 0;
+}
+
+.favorite-list li {
+  position: relative;
+  margin: 8px 0;
+}
+
+.favorite-list li::before {
+  counter-increment: number;
+  content: counter(number);
+  display: inline-block;
+  width: 1.5em;
+  margin-right: 5px;
+  background-color: #aaa;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.favorite-list em {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 11px;
+  background: url("./images/rank.png") no-repeat;
+  background-position-x: 50%;
+}
+
+.favorite-list .up {
+  background-position-y: 0;
+}
+
+.favorite-list .stop {
+  background-position-y: 50%;
+}
+
+.favorite-list .down {
+  background-position-y: 100%;
+}
+
+.favorite-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
 }
 
 /* 슬로건 */
