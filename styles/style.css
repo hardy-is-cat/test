@@ -54,8 +54,9 @@ body {
   linear-gradient(to bottom, #ccc, #eee 35%, #efefef 60%, #fff 100%);
   background-repeat: no-repeat, repeat;
   background-position: 50% 0, 0 0; */
-  background: url(./images/bg_flower.png) no-repeat 50% 0,
-  yellow linear-gradient(to bottom, #ccc, #eee 35%, #efefef 60%, #fff 100%) repeat 0;
+  background: url("./images/bg_flower.png") no-repeat 50% 0,
+            #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%)
+              repeat 0 0;
 }
 
 /* 레이아웃 */
@@ -278,7 +279,6 @@ body {
   background-color: #fff;
   display: flow-root;
   padding: 30px 15px;
-  min-height: 450px;
   border-radius: 15px 15px 0 0;
 }
 
@@ -816,9 +816,44 @@ body {
 
 /* 슬로건 */
 .slogan {
-  background-color: lightgreen;
-  height: 10vh;
+  position: relative;
+  padding: 15px 100px 15px 180px;
+  /* clear: both로 이중잠금 하기 */
   clear: both;
+}
+
+.slogan-title {
+  position: absolute;
+  bottom: -25px;
+  left: 20px;
+  width: 110px;
+  height: 83px;
+  line-height: 83px;
+  text-align: center;
+}
+
+.slogan-title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/coffee.png");
+}
+
+.slogan-content {
+  color: #a09784;
+}
+
+.slogan-content q::before {
+  display: inline-block;
+  font-size: 3rem;
+  transform: translateY(10px);
+}
+
+.slogan-content q::after {
+  content: '';
 }
 
 /* 푸터 */
